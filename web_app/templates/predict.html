@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="../static/style2.css">
+</head>
+<body>
+    <nav>
+        <img src="{{url_for('static', filename='vonage_logo.svg')}}">
+    </nav>
+    <section>
+        <div class="side">
+            <img src="{{url_for('static', filename='Author.png')}}" width="350px" height="350px">
+            <h4>Author: Aboze Brain John Jnr</h4>
+            <h2>Project: SMS spam detection system</h2>
+            <h2>using Machine Learning, Python, Flask and</h2>
+            <h2>Vonage API</h2>
+        </div>
+        <div class="vl"></div>
+        <div class="main results">
+            <h1>Machine Learning Prediction</h1>
+            {% if prediction == 1%}
+            <h2 style="color:red; font-size: x-large;">This looks like a Spam</h2>
+            <span style='font-size:100px;'>&#128545;</span>
+            {% elif prediction == 0%}
+            <h2 style="color:green; font-size: x-large;">This looks like a Ham</h2>
+            <span style='font-size:100px;'>&#128512;</span>
+
+            {% endif %}
+        </div>
+    </section>
+</body>
+</html>
