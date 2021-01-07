@@ -19,7 +19,7 @@ warnings.filterwarnings("ignore")
 
 app = Flask(__name__)
 # secret key is needed for session
-app.secret_key = 'dljsaklqk24e21cjn!Ew@@dsa5'
+app.secret_key = os.getenv('secret_key')
 
 
 @app.route('/',  methods=['GET', 'POST'])
